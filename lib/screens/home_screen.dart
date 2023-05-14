@@ -8,7 +8,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Body(
         content: Content(
-          child: Container(),
+          child: Container(
+            child: Image.network("https://picsum.photos/250?image=9"),
+          ),
         ),
         bottom: BottomNavigation());
   }
