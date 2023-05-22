@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
         alignment: Alignment.center,
         height: 60,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
               padding: const EdgeInsets.all(10),
@@ -26,20 +26,19 @@ class HomeScreen extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   )),
             ),
-            const SizedBox(
-                width: 500,
+            const Expanded(
                 child: TextField(
-                  decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.search),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(80)),
-                          borderSide: BorderSide(color: Colors.transparent)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(80)),
-                          borderSide: BorderSide(color: Colors.transparent)),
-                      filled: true,
-                      fillColor: Color.fromRGBO(230, 223, 223, 1)),
-                )),
+              decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.search),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(80)),
+                      borderSide: BorderSide(color: Colors.transparent)),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(80)),
+                      borderSide: BorderSide(color: Colors.transparent)),
+                  filled: true,
+                  fillColor: Color.fromRGBO(230, 223, 223, 1)),
+            )),
           ],
         ),
       ),

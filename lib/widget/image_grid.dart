@@ -12,7 +12,14 @@ class ImageGrid extends StatelessWidget {
       crossAxisCount: 4,
       crossAxisSpacing: 20,
       mainAxisSpacing: 20,
-      children: List.filled(50, Image.network(src)),
+      children: List.filled(
+          50,
+          ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.network(
+                src,
+                fit: BoxFit.cover,
+              ))),
     );
   }
 }
