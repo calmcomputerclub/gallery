@@ -27,13 +27,18 @@ class HomeScreen extends StatelessWidget {
                   )),
             ),
             const SizedBox(
-                width: 250,
+                width: 500,
                 child: TextField(
                   decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.search),
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                          borderRadius: BorderRadius.all(Radius.circular(80)),
+                          borderSide: BorderSide(color: Colors.transparent)),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(80)),
+                          borderSide: BorderSide(color: Colors.transparent)),
                       filled: true,
-                      fillColor: Colors.lightGreen),
+                      fillColor: Color.fromRGBO(230, 223, 223, 1)),
                 )),
           ],
         ),
