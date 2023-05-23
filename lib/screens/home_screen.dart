@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gallery/widget/image_grid.dart';
+import 'package:gallery/widget/navigation.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,41 +8,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const ImageGrid(),
-      bottomNavigationBar: Container(
-        alignment: Alignment.center,
-        height: 60,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Container(
-              padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(80), color: Colors.black),
-              child: TextButton(
-                  onPressed: () {},
-                  style: TextButton.styleFrom(foregroundColor: Colors.white),
-                  child: const Text(
-                    "홈",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  )),
-            ),
-            const Expanded(
-                child: TextField(
-              decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(80)),
-                      borderSide: BorderSide(color: Colors.transparent)),
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(80)),
-                      borderSide: BorderSide(color: Colors.transparent)),
-                  filled: true,
-                  fillColor: Color.fromRGBO(230, 223, 223, 1)),
-            )),
-          ],
-        ),
-      ),
+      body: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: [Navigation()],
+          )),
     );
   }
 }
